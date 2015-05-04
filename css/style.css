@@ -1,0 +1,26 @@
+* {
+/*    border: 1px solid blue;*/
+}
+
+.container {
+    display: block;
+    width: 800px;
+    height: 700px;
+}
+
+.block {
+    height: 18px;
+    width: 18px;
+    border: 1px solid gray;
+    margin: 0px 0px;
+    background-color: antiquewhite
+}
+
+tr, td {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+
+    
