@@ -73,6 +73,8 @@ var addBoard = function(numOfRows, numOfCols) {
 
 
 var paintNow = false;
+// default color is red.
+var currentColor = 'red';
 
 
 $(document).ready(function() {
@@ -87,19 +89,63 @@ $(document).ready(function() {
 	});
 
 	$('.block').on('mouseenter', function() {
-	// $('.block').on('hover', function() {
+		// Original code to change the color of a tile.
+		// if (paintNow && !$(this).hasClass('makered')) {
+		// 	$(this).toggleClass('makered');
+		// }
 
-		// alert("paintNow: " + paintNow);
-		if (paintNow && !$(this).hasClass('makered')) {
-			$(this).toggleClass('makered');
+		// paint the tile the selected color if the mouse button is pressed.
+		if (paintNow) {
+			// Set the opacity. The opacity initially starts out at 0.2 and
+			// increases 0.2 each time the tile is recolored. The opacity of
+			// an initial, unpainted square is 1.0.
+			var currentOpacity = +$(this).css('opacity');
+
+			// if a square has not been painted before it's initial opacity is
+			// 1.0 so set the the opacity to 0.2.  If the square has been
+			// painted then increase it's opacity by 0.2. Once a painted
+			// square's opacity is 1.0 do not change it's opacity agian.
+			if ($(this).hasClass('painted') && currentOpacity < 1.0) {
+				currentOpacity += 0.2;				
+			}
+
+			else if (!$(this).hasClass('painted')){
+				currentOpacity = 0.2;
+			}
+			currentOpacity = currentOpacity.toString();
+
+			// set the square's color, opacity and add the 'painted' class.
+			$(this).css({'background-color': currentColor, 'opacity': currentOpacity});
+			$(this).addClass('painted');
 		}
-       // alert("I'm clicked!");
-		// $(this).toggleClass('makered');
+	});
+
+
+	$('.button').click(function() {
+		var buttons = $('.button');
+		buttons.removeClass('selected');
+		$(this).addClass('selected');
+
+		// set the color if a color select button was pressed.
+		if ($(this).hasClass('color_select')) {
+			switch($(this).attr('id')) {
+				case 'red':
+					currentColor = 'red';
+					break;
+				case 'blue':
+					currentColor = 'blue';
+					break;
+				case 'yellow':
+					currentColor = 'yellow';
+					break;
+				case 'white':
+					currentColor = 'white';
+					break;	
+			}
+		}
+
+
 	});
     
- //    // this works!!! Test click event handler to get correct block working.
- //    $('.block').click(function() {
-	// 	$(this).toggleClass('makered');
-	// });
 
 });

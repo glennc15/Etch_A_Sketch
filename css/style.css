@@ -12,13 +12,14 @@
     margin: auto;
 /*    border: 1px solid red;*/
     border-radius: 40px 40px 0px 0px;
-    padding: 70px;
+    padding: 70px 70px 20px 70px;
     background: #BF0000;
 }
 
 table {
     border-radius: 10px;
-    border: 4px solid white;   
+    border: 4px solid white;
+    background-color: #FFFFFF;
 }
 
 .block {
@@ -26,7 +27,8 @@ table {
     width: 40px;
     border: 1px solid gray;
     margin: 0px 0px;
-    background-color: #C0C0C0
+    background-color: #C0C0C0;
+    opacity: 1.0;
 }
 
 div .makered {
@@ -77,6 +79,10 @@ li {
     margin: 15px 0px;
 }
 
+.button:hover {
+    border: 3px solid #00BF36;
+}
+
 #red {
     color: red;
     text-shadow: red 0 -1px 0;
@@ -96,19 +102,20 @@ li {
     color: white;
 }
 
-.button_selected {
-    border: 3px solid #FFD700;
-
+.selected {
+/*    border: 3px solid #FFD700;*/
+/*    border: 3px solid #593324;*/
+    border: 3px solid #64F218;
 }
 
 #colors {
 /*    float: left;*/
-    margin-left: 50px;
+    margin-left: 70px;
 }
 
 #edits {
     float: right;
-    margin-right: 50px;
+    margin-right: 70px;
 }
 
 
