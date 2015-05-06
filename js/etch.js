@@ -140,7 +140,10 @@ $(document).ready(function() {
 					break;
 				case 'white':
 					currentColor = 'white';
-					break;	
+					break;
+				case 'black':
+					currentColor = 'black';
+					break;		
 			}
 		}
 
