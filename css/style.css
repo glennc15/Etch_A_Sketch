@@ -4,16 +4,23 @@
 
 .container {
     display: block;
+/*    width: 960px;*/
+/*    height: 960px;*/
     width: 800px;
-    height: 700px;
+    height: 800px;
+    
 }
 
 .block {
-    height: 18px;
-    width: 18px;
+    height: 40px;
+    width: 40px;
     border: 1px solid gray;
     margin: 0px 0px;
     background-color: antiquewhite
+}
+
+div .makered {
+    background-color: red;
 }
 
 tr, td {

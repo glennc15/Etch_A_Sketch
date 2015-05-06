@@ -1,3 +1,5 @@
+
+
 // build one block of the etch-a-sketch board in HTML markup.
 var getBlock = function() {
     return "<td><div class='block'></div></td>";
@@ -70,8 +72,33 @@ var addBoard = function(numOfRows, numOfCols) {
 
 
 
+var paintNow = false;
 
 $(document).ready(function() {
-	addBoard(16);
+	addBoard(10);
+
+	$('div').on('mousedown', function() {
+		paintNow = true;
+	});
+
+	$('div').on('mouseup', function() {
+		paintNow = false;
+	});
+
+	$('.block').on('mouseenter', function() {
+	// $('.block').on('hover', function() {
+
+		// alert("paintNow: " + paintNow);
+		if (paintNow && !$(this).hasClass('makered')) {
+			$(this).toggleClass('makered');
+		}
+       // alert("I'm clicked!");
+		// $(this).toggleClass('makered');
+	});
+    
+ //    // this works!!! Test click event handler to get correct block working.
+ //    $('.block').click(function() {
+	// 	$(this).toggleClass('makered');
+	// });
 
 });
