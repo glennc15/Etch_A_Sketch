@@ -74,8 +74,9 @@ var addBoard = function(numOfRows, numOfCols) {
 
 var paintNow = false;
 
+
 $(document).ready(function() {
-	addBoard(10);
+	addBoard(16);
 
 	$('div').on('mousedown', function() {
 		paintNow = true;
