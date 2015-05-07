@@ -159,7 +159,8 @@ $(document).ready(function() {
 					// Erase button: ask the user to enter how many grids to
 					// make the board. Then generates a new board with the
 					// number of grids specified by the user.
-					var boardSize = +prompt("What size of board do you want to draw on?", "50");
+					var boardSize =16;
+					boardSize = +prompt("What size of board do you want to draw on?", "16");
 					addBoard(boardSize);
 					break;
 
