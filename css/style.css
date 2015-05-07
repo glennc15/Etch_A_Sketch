@@ -2,6 +2,19 @@
 /*    border: 1px solid blue;*/
 }
 
+.title {
+    position: absolute;
+    margin: 20px 275px;
+    font-family: 'Rock Salt', cursive;
+    font-size: 1.9em;
+    
+    color: white;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
 
 .container {
 /*    display: block;*/
@@ -10,6 +23,7 @@
     width: 800px;
     height: 800px;
     margin: auto;
+    margin-top: 10px;
 /*    border: 1px solid red;*/
     border-radius: 40px 40px 0px 0px;
     padding: 70px 70px 20px 70px;
