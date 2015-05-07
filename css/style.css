@@ -138,5 +138,33 @@ li {
     margin-right: 70px;
 }
 
+.help {
+    width: 400px;
+/*    height: 400px;*/
+    background-color: #039EFF;
+    
+    position: absolute;
+    top: 200px;
+    left: 290px;
+    border: 4px solid #0E5B8C;
+}
+
+.help > p {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.5em;
+/*    text-shadow:*/
+/*        -1px -1px 0 #fff,*/
+/*        1px -1px 0 #fff,*/
+/*        -1px 1px 0 #fff,*/
+/*        1px 1px 0 #fff;*/
+    color: aliceblue;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.hide {
+    display: none;
+}
+
 
     

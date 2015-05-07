@@ -109,12 +109,16 @@ var addBoard = function(numOfRows, numOfCols) {
 	setBlockDimensions(numOfRows);
 }
 
+// Hover event handler for the Help button.
+var helpHooverHandler = function() {
+	$('.help').toggleClass('hide');
+}
 
 $(document).ready(function() {
 	// Add a board with 16 squares
 	addBoard(16);
 	
-
+	// Button event handler. The Help button has a Hoover event handler.
 	$('.button').click(function() {
 		// // highlights the current button.
 		// var buttons = $('.button');
@@ -160,9 +164,13 @@ $(document).ready(function() {
 					break;
 
 				case 'help':
-					alert("Help! button clicked.");
+					// alert("Help! button clicked.");
+					// $('.help').toggleClass('hide');
 					break;
 			}
 		}
 	});
+
+	// Event handler for the Help button.
+	$('#help').hover(helpHooverHandler, helpHooverHandler);
 });
